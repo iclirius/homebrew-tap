@@ -1,6 +1,6 @@
 class Iclirius < Formula
   desc "Local-first Iclirius agent runtime and terminal interface"
-  homepage "https://github.com/iclirius/iclirius-openclaw"
+  homepage "https://github.com/iclirius/iclirius-distribution"
   url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.1/iclirius-1.0.0-rc.1.tar.gz"
   version "1.0.0-rc.1"
   sha256 "2a95ba965be0f512e37bec62717df792222b0dbcb1a8aa40fe4b5e0dcd01e8da"
