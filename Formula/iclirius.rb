@@ -1,8 +1,8 @@
 class Iclirius < Formula
   desc "Local-first Iclirius agent runtime and terminal interface"
   homepage "https://github.com/iclirius/iclirius-distribution"
-  url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.5/iclirius-1.0.0-rc.5.tar.gz"
-  sha256 "9d86c3b2b192e374cf106f3f494420ee026d0e5127b20234f5b804e14c4512b0"
+  url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.6/iclirius-1.0.0-rc.6.tar.gz"
+  sha256 "39e32cdbb84bdbe826970e74473570d194c2fb465ef393c9ffa8049cbcdd0875"
   license "MIT"
 
   depends_on "python@3.14"
