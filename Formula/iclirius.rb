@@ -12,7 +12,9 @@ class Iclirius < Formula
     venv = libexec/"venv"
     system formula_opt_bin("python@3.14")/"python3.14", "-m", "venv", venv
     system venv/"bin/pip", "install", "--upgrade", "pip"
-    system venv/"bin/pip", "install", cached_download
+    wheel = buildpath/"iclirius_openclaw-1.0.0rc10-py3-none-any.whl"
+    cp cached_download, wheel
+    system venv/"bin/pip", "install", wheel
     bin.install_symlink venv/"bin/iclirius"
   end
 
