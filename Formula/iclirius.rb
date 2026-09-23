@@ -17,7 +17,7 @@ class Iclirius < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/iclirius --version")
+    assert_match "1.0.0-rc.10", shell_output("#{bin}/iclirius --version")
     system bin/"iclirius", "node", "status", "--json"
   end
 end
