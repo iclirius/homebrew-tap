@@ -1,8 +1,8 @@
 class Iclirius < Formula
   desc "Local-first Iclirius agent runtime and terminal interface"
   homepage "https://github.com/iclirius/iclirius-distribution"
-  url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.27/iclirius_openclaw-1.0.0rc27-py3-none-any.whl"
-  sha256 "beac7fe96417a4bf26ba8b51627fb802bc5b1a4eee21734b4ae92d98e8d8fb30"
+  url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.28/iclirius_openclaw-1.0.0rc28-py3-none-any.whl"
+  sha256 "7f24b15d4f471edd3c50964ce25456cea41be3bdb93a8864f1a75e6be2a92729"
   license "MIT"
 
   depends_on "python@3.14"
@@ -12,14 +12,14 @@ class Iclirius < Formula
     venv = libexec/"venv"
     system formula_opt_bin("python@3.14")/"python3.14", "-m", "venv", venv
     system venv/"bin/pip", "install", "--upgrade", "pip"
-    wheel = buildpath/"iclirius_openclaw-1.0.0rc27-py3-none-any.whl"
+    wheel = buildpath/"iclirius_openclaw-1.0.0rc28-py3-none-any.whl"
     cp cached_download, wheel
     system venv/"bin/pip", "install", wheel
     bin.install_symlink venv/"bin/iclirius"
   end
 
   test do
-    assert_match "1.0.0-rc.27", shell_output("#{bin}/iclirius --version")
+    assert_match "1.0.0-rc.28", shell_output("#{bin}/iclirius --version")
     system bin/"iclirius", "node", "status", "--json"
   end
 end
