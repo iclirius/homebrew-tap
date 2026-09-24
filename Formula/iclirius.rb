@@ -1,7 +1,7 @@
 class Iclirius < Formula
   desc "Local-first Iclirius agent runtime and terminal interface"
   homepage "https://github.com/iclirius/iclirius-distribution"
-  url "https://github.com/iclirius/iclirius-openclaw/releases/download/v1.0.0-rc.29/iclirius_openclaw-1.0.0rc29-py3-none-any.whl"
+  url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.29/iclirius_openclaw-1.0.0rc29-py3-none-any.whl"
   sha256 "35401c4c8f0c27d52fa70ddefa906e56d983aa500246f50e4c0ddcef636d0a64"
   license "MIT"
 
