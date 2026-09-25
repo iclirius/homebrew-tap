@@ -1,8 +1,8 @@
 class Iclirius < Formula
   desc "Local-first Iclirius agent runtime and terminal interface"
   homepage "https://github.com/iclirius/iclirius-distribution"
-  url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.38/iclirius_openclaw-1.0.0rc38-py3-none-any.whl"
-  sha256 "40bb2d1a8641b21f79a5b15149f579dbb8b06d2fda781a75f524cef93c4eeb78"
+  url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.39/iclirius_openclaw-1.0.0rc39-py3-none-any.whl"
+  sha256 "661350ba318678d25cc66b292c5cdbed6ff237da721ef5c3f078de82e8dbe844"
   license "MIT"
 
   depends_on "python@3.14"
@@ -12,7 +12,7 @@ class Iclirius < Formula
     venv = libexec/"venv"
     system formula_opt_bin("python@3.14")/"python3.14", "-m", "venv", venv
     system venv/"bin/pip", "install", "--upgrade", "pip"
-    wheel = buildpath/"iclirius_openclaw-1.0.0rc38-py3-none-any.whl"
+    wheel = buildpath/"iclirius_openclaw-1.0.0rc39-py3-none-any.whl"
     cp cached_download, wheel
     system venv/"bin/pip", "install", wheel
     bin.install_symlink venv/"bin/iclirius"
