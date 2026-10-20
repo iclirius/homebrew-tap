@@ -1,0 +1,27 @@
+class IcliriusAT100Rc45 < Formula
+  desc "Local-first Iclirius agent runtime (1.0.0-rc.45; not the V1 certified default)"
+  homepage "https://github.com/iclirius/iclirius-distribution"
+  url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.45/iclirius_openclaw-1.0.0rc45-py3-none-any.whl"
+  sha256 "8d1778eb0e7dff7dcb2a52cfa23cd858c9ed59a2db74d5a5fca7e198387c1264"
+  license "MIT"
+
+  keg_only :versioned_formula
+
+  depends_on "python@3.14"
+  depends_on "ffmpeg" => :optional
+
+  def install
+    venv = libexec/"venv"
+    system formula_opt_bin("python@3.14")/"python3.14", "-m", "venv", venv
+    system venv/"bin/pip", "install", "--upgrade", "pip"
+    wheel = buildpath/"iclirius_openclaw-1.0.0rc45-py3-none-any.whl"
+    cp cached_download, wheel
+    system venv/"bin/pip", "install", wheel
+    bin.install_symlink venv/"bin/iclirius"
+  end
+
+  test do
+    assert_match "1.0.0-rc.45", shell_output("#{bin}/iclirius --version")
+    system bin/"iclirius", "node", "status", "--json"
+  end
+end
