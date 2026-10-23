@@ -2,7 +2,7 @@ class Iclirius < Formula
   desc "Local-first agent runtime with unified cluster task TUI"
   homepage "https://github.com/iclirius/iclirius-distribution"
   url "https://github.com/iclirius/iclirius-distribution/releases/download/v1.0.0-rc.47/iclirius_openclaw-1.0.0rc47-py3-none-any.whl"
-  version "1.0.0-rc.47"
+  version "1.0.0rc47"
   sha256 "7532dfe2ac09b6954b921ffad11289e7b32bf7d8a936fbb11d6cdadbec72af3b"
   license "MIT"
 
